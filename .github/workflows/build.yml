@@ -104,7 +104,6 @@ jobs:
             io.artifacthub.package.prerelease=false
             containers.bootc=1
           sep-tags: " "
-          sep-annotations: " "
 
       - name: Build Image
         id: build_image
@@ -157,7 +156,6 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.metadata.outputs.tags }}
-          registry: ${{ env.IMAGE_REGISTRY }}
 
       # This section is optional and only needs to be enabled if you plan on distributing
       # your project for others to consume. You will need to create a public and private key
